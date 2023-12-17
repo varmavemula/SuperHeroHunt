@@ -1,0 +1,213 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+.TitleBar{
+    height:75px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    position:fixed;
+    z-index: 2;
+    display: flex;
+    border: 2px solid rgb(90, 89, 89);
+    padding-left: 50px;
+}
+
+#mySearchInput:focus{
+    border: none;
+    box-shadow: 2px 0px 18px 4px rgba(185, 35, 35, 0.75); ;
+}
+
+#image-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.main{
+    padding-top: 75px;
+}
+ 
+#results-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: rgba(black,0,0,0.9);
+    position: relative;
+    padding-top: 75px;
+    border:2px black solid;
+    width: 70vw;
+    margin-left: 15%;
+    box-shadow: inset 0px -50px 100px 5px rgba(19, 19, 19, 0.9);
+}
+
+#results-container table{
+    width: 50%;
+    background-color: rgba(5, 5, 5, 0.75);
+    margin-left: 25%;  
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.add-fav{
+    visibility: hidden;
+}
+
+#results-container table:hover{
+    transform: scale(1.1);
+    background-color: white;
+    border: 2px solid black;
+    .profile{
+        border: 2px solid black;
+    }
+    .add-fav{
+        visibility: visible;
+    }
+}
+
+.profile{
+    height: 75px;
+    width: 75px;
+    margin-left: 20px;
+    border: 2px solid white;
+}
+
+ .character{
+    width: 75px;
+    height: 75px;
+}
+
+.profile:hover{
+    opacity: 1;
+    transition: all 0.5s;
+    transform: perspective(300px) rotateX(20deg) scale(1.1) ;
+    box-shadow: 2px 35px 32px -8px rgba(254, 253, 253, 0.75);
+}
+
+.name-cell{
+    height: 100px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0 20px;
+    font-family: fantasy;
+    margin-left:20px ;
+    width: 90%;
+}
+
+.name-div{
+    margin-left:20px ;
+    width: 90%;
+}
+
+
+/*-----Character------*/
+/* ----------------------------------------------------------------------------- */
+.char-cover{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    margin-top:75px;
+    padding: 10px;
+    
+}
+
+.char-cover img{
+    width:30%;
+    height:30%;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+
+.char-content{
+   display: flex;
+   flex-direction: column;
+   margin: 2rem;
+   padding: 2rem;
+   width: 50%;
+    color: white;
+    font-size: 1.2em;
+}
+
+
+
+/*--------------favourite-page------------*/
+/*=--------------------------------------*/
+/* #fav-main{
+    height: 100%;
+} */
+
+#fav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: rgba(black,0,0,0.9);
+    position: relative;
+    padding-top: 100px;
+    border:2px red solid;
+    width: 70%;
+    margin-left: 15%;   
+}
+
+.card{
+    height:100px;
+    width:100px;
+    text-align: center;
+    cursor: pointer;
+    font-family: cursive;
+    position: relative;
+    border: 2px solid black;
+}
+
+#card{
+    border:2px whitesmoke solid;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    font-size: 0.75em;
+}
+  
+
+.card img{
+    border:1px black solid;
+    margin: 2px;
+    height:75%;
+    width: 75%;
+    align-self: center;
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+

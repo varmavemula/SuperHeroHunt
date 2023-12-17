@@ -1,0 +1,15 @@
+{
+  "name": "superhero_hunt",
+  "version": "1.0.0",
+  "description": "super hero hunt",
+  "main": "index.html",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "require": "^2.4.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
