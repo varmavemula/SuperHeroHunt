@@ -1,20 +1,7 @@
 
-// const publicKey = 'afb9787b2a32e592331e2ba1de319880';
-// const privateKey = '66bacb880242f4f8ac1d176cfb10c55161abdbb6';
-
-// const ts = new Date().getTime(); // Get the current timestamp
-
-// // Create the hash using MD5 algorithm
-// const hash = CryptoJS.MD5(ts+privateKey+publicKey).toString();
-
-               
-// console.log('Timestamp (ts):', ts);
-// console.log('Generated Hash:', hash);
-
-// Construct the API URL with the timestamp, public key, and hash
-// const apiUrl = `http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
-const Baseurl = `${baseCharactersUrl}characters?&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+const Baseurl = `${baseCharactersUrl}characters?&ts=1&apikey=${publicKey}&hash=${hash}`;
 let flag = true;
+console.log(Baseurl);
 
 //EventListener is added to invoke the function start() when DOMContent is loaded
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -51,9 +38,53 @@ const characters = new Map();
 
 //start function to load initial characters on the home page
 function start(){
-  const url = `${baseCharactersUrl}characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
-  console.log(url);
+  const CharUrl = `${baseCharactersUrl}characters?limit=${limit}&offset=${offset}&ts=1&apikey=${publicKey}&hash=${hash}`;
+  console.log(CharUrl);
   fetch(url).then(function(response){
+            return response.json();
+  }).then(res => {
+      console.log(res);
+      let data = res.data.results;
+      console.log(allCharacters);
+      let currRows = '';
+      data.map(function(item)
+      {
+        // console.log(typeof(item.thumbnail.extension));
+
+          if(item.description!='')
+          {
+              currRows += `<table><tbody>
+                <tr>
+                  <td class='character'>
+                    <img class="profile" href='character.html?id=${item.id}' src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
+                  </td>`;
+              currRows +=`
+                  <td class='name-cell'>
+                    <a href="./character.html?id=${item.id}" target="_blank">
+                      <div class='name-div'>${item.name}</div>
+                    </a>
+                    <button class='add-fav' onclick="toggleLike(${item.id})">
+                      <i class="fa-solid fa-star fa-beat"></i>
+                    </button>
+                  </td>
+                </tr></tbody></table>`;
+              if(!characters.get(item.id))
+              {
+                  characterData.push({'id': `${item.id}`, 'title':`${item.name}`, 'image':`${item.thumbnail.path}.${item.thumbnail.extension}`, liked:false});
+                  allCharacters.push(item);
+                  characters.set(item.id,true);
+                  localStorage.setItem('character', JSON.stringify(characterData));
+              }
+          } 
+      });         
+      dataSoFar += currRows;
+      document.getElementById('results-container').innerHTML = formatTable(dataSoFar);
+      offset+=limit;
+      });
+
+      const ComicsUrl = `${baseCharactersUrl}characters?limit=${limit}&offset=${offset}&ts=1&apikey=${publicKey}&hash=${hash}`;
+  console.log(ComicsUrl);
+  fetch(ComicsUrl).then(function(response){
             return response.json();
   }).then(res => {
       console.log(res);
@@ -155,7 +186,7 @@ function updateValue()
       flag=false;
       let container = document.getElementById('results-container');
       container.innerHTML = '';
-      let searchUrl = `${baseCharactersUrl}characters?nameStartsWith=${filter}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+      let searchUrl = `${baseCharactersUrl}characters?nameStartsWith=${filter}&ts=1&apikey=${publicKey}&hash=${hash}`;
       fetchData(searchUrl);
       
     }

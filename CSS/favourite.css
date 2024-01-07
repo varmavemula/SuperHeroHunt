@@ -1,0 +1,112 @@
+
+
+
+.TitleBar{
+    height:75px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    border: 2px solid rgb(90, 89, 89);
+    padding-left: 50px;
+}
+#image-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+#fav-container{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: rgba(black,0,0,0.9);
+    position: relative;
+    margin-top:10%;
+    border:2px red solid;
+    width: 70%;
+    margin-left: 15%;   
+}
+
+#remove{
+    position: absolute;
+    text-decoration: none;
+    font-size: 2.5em;
+    top:-20px;
+    left: -10px;
+    color: rgb(68, 0, 255);
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+.card{
+    text-align: center;
+    position: relative;
+    /*  border: 2px solid black; */
+}
+
+#card{
+    border:2px whitesmoke solid;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 0.75em;
+    font-family: cursive;
+    height: 250px;
+    width: 150px;
+    text-wrap: wrap;
+    
+}
+@keyframes blureffect{
+    0%{
+        box-shadow: 0px 0px 0px 0px;
+    }
+    25%{
+        box-shadow: 5px 5px 250px 2.5px;
+    }
+
+    50%{
+        box-shadow: 5px 5px 500px 5px;
+    }
+    99%{
+        box-shadow: 5px 5px 750px 7.5px;
+    }
+
+    100%{
+        box-shadow: 0px 0px 0px 0px;
+    }
+}
+
+
+#card:hover{
+    animation: blureffect 1s;
+    z-index: 0;
+}
+#card:hover>img{
+    height: 50%;
+    width: 75%;
+    
+    
+}
+#card:hover>#remove{
+    visibility: visible;
+}
+  
+
+.card img{
+    border:1px black solid;
+    margin: 5%;
+    height:45%;
+    width: 50%;
+    align-self: center;
+}
+
+

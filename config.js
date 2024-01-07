@@ -1,13 +1,15 @@
 const publicKey = 'afb9787b2a32e592331e2ba1de319880';
-const privateKey = '66bacb880242f4f8ac1d176cfb10c55161abdbb6';
-
-const ts = new Date().getTime(); // Get the current timestamp
+const hash = 'dfd439406c3e4955b8d47e3f1b615df0';
+const ts ='1';
+ // Get the current timestamp
 
 // Create the hash using MD5 algorithm
-const hash = CryptoJS.MD5(ts+privateKey+publicKey).toString();
+//const hash1 = CryptoJS.MD5(ts+atob(hashcode)+publicKey).toString();
+
+//const hash = CryptoJS.MD5('1'+(privateKey)+publicKey).toString();
 
                
-console.log('Timestamp (ts):', ts);
+//console.log('Timestamp (ts):', ts);
 console.log('Generated Hash:', hash);
 
 const baseCharactersUrl = 'https://gateway.marvel.com:443/v1/public/';
