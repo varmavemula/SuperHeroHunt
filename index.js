@@ -56,11 +56,11 @@ function start(){
               currRows += `<table><tbody>
                 <tr>
                   <td class='character'>
-                    <img class="profile" href='character.html?id=${item.id}' src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
+                    <img class="profile" href='./HTML/character.html?id=${item.id}' src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
                   </td>`;
               currRows +=`
                   <td class='name-cell'>
-                    <a href="./character.html?id=${item.id}" target="_blank">
+                    <a href="./HTML/character.html?id=${item.id}" target="_blank">
                       <div class='name-div'>${item.name}</div>
                     </a>
                     <button class='add-fav' onclick="toggleLike(${item.id})">
@@ -100,11 +100,11 @@ function start(){
               currRows += `<table><tbody>
                 <tr>
                   <td class='character'>
-                    <img class="profile" href='character.html?id=${item.id}' src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
+                    <img class="profile" href='./HTML/character.html?id=${item.id}' src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
                   </td>`;
               currRows +=`
                   <td class='name-cell'>
-                    <a href="./character.html?id=${item.id}" target="_blank">
+                    <a href="./HTML/character.html?id=${item.id}" target="_blank">
                       <div class='name-div'>${item.name}</div>
                     </a>
                     <button class='add-fav' onclick="toggleLike(${item.id})">
@@ -147,11 +147,11 @@ function fetchData(url)
             {
                   currRows += `<table><tbody><tr >
                       <td class='character'>
-                        <img class="profile" href='character.html?id=${item.id}'  src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
+                        <img class="profile" href='./HTML/character.html?id=${item.id}'  src="${item.thumbnail.path}.${item.thumbnail.extension}"/>
                       </td>`;
                   currRows +=`
                       <td class='name-cell'>
-                        <a href="./character.html?id=${item.id}" onclick="loadData(${item})">
+                        <a href="./HTML/character.html?id=${item.id}" onclick="loadData(${item})">
                           <div class='name-div'>${item.name}</div>
                         </a>
                         <button id="fav-Char-${item.id}" onclick="toggleLike(${item.id})" class='add-fav'>

@@ -1,2 +1,0 @@
-
-// localStorage.setItem('mapData', favMap);
