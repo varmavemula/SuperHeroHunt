@@ -1,5 +1,5 @@
 
-# SuperHeroHunt
+# SuperHeroHunt -----> https://varmavemula.github.io/SuperHeroHunt/
 
 ## Table of Contents
 
@@ -36,6 +36,12 @@ Bootstrap\
 FontAwesome(for icons)
 
 ## Screenshots
+### HomePage
+![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/b73383c5-7a12-4ef9-b938-a7eebf21e820)
+
+### Character Page
+![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/3f4b89bd-0d9d-4b8a-96ed-63cfcf257bc1)
+
 Visual representation of the project's UI\
 GIFs or videos showcasing features (optional)
 
