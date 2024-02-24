@@ -19,7 +19,7 @@ fetch(Charurl).then(function (response) {
     dataLoad += `   <div class="char-content">
                             <h1 style="color:red">${data[0].name}</h1>
                             <p >${data[0].description}</p>
-                            <button id="fav-button">${favStatus}</button>
+                            <button id="fav-button">Favorite</button>
                         </div>
                         
                       </div>
