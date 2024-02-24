@@ -43,7 +43,7 @@ function renderHeroPage() {
     currRows += `
                         <td class='name-cell'>
                           <a href="./HTML/character.html?id=${item.id}" onclick="loadData(${item})">
-                            <div class='name-div'>${item.title}</div>
+                            <div class='name-div'>${item.name}</div>
                           </a>
                           <button id="fav-Char-${item.id}" onclick="toggleLike(${item.id})" class='add-fav'>
                             <i class="fa-solid fa-star fa-beat"></i>
