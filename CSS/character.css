@@ -1,17 +1,16 @@
-
-.TitleBar{
-    height:75px;
+.TitleBar {
+    height: 75px;
     background-color: rgb(83, 82, 82);
     color: white;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     border: 2px solid rgb(4, 4, 4);
 }
 
-#char-details{
+#char-details {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,22 +19,22 @@
     justify-content: baseline;
 }
 
-.char-cover{
-    
+.char-cover {
+
     display: flex;
     flex-direction: row;
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: center;
-    margin-top:75px;
+    margin-top: 75px;
     padding: 10px;
     background-color: black;
     z-index: 1;
     box-sizing: border-box;
 }
 
-.char-cover img{
-    width:30%;
-    height:30%;
+.char-cover img {
+    width: 30%;
+    height: 30%;
     margin: 2rem;
     padding: 2rem;
     box-shadow: 0 4px 80px 0 rgb(252, 2, 2), 0 6px 40px 0 rgb(252, 2, 2);
@@ -43,7 +42,7 @@
 }
 
 
-.char-content{
+.char-content {
     display: flex;
     flex-direction: column;
     /* margin: 2rem; */
@@ -54,24 +53,27 @@
     font-family: "Audiowide", sans-serif;
 }
 
-#fav-button{
-    width:50%;
+#fav-button {
+    width: 50%;
+
 
 }
 
-#comics{
+#comics {
     background-color: rgba(3, 3, 3, 0.5);
     box-sizing: border-box;
     width: 100%;
     padding: 20px;
     font-size: larger;
     font-weight: bolder;
-    
+
 }
-#comics h2{
+
+#comics h2 {
     font-weight: bolder;
 }
-#com-div{
+
+#com-div {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -79,15 +81,17 @@
     justify-content: space-around;
     box-sizing: border-box;
 }
-.add-fav{
+
+.add-fav {
     position: relative;
     z-index: 2;
 }
-.com-card{
+
+.com-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:2px whitesmoke solid;
+    border: 2px whitesmoke solid;
     background-color: black;
     color: white;
     cursor: pointer;
@@ -97,19 +101,20 @@
     height: inherit;
     width: 150px;
     text-wrap: wrap;
+
 }
 
 
 
-.com-card img{
-    border:1px black solid;
-    margin: 1% 12.5% ;
-    height:50%;
+.com-card img {
+    border: 1px black solid;
+    margin: 1% 12.5%;
+    height: 50%;
     width: 75%;
-    box-sizing: border-box;  
+    box-sizing: border-box;
     z-index: 1;
 }
 
-.com-title{
+.com-title {
     width: 50%;
 }
