@@ -43,6 +43,6 @@ function renderFavoritesPage() {
         });
     }
     else {
-        document.getElementById('fav-container').innerHTML = `<h2>nothing is liked to show here!</h2>`;
+        document.getElementById('fav-container').innerHTML += `<h2>nothing is liked to show here!</h2>`;
     }
 }

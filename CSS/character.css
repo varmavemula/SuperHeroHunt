@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .TitleBar {
     height: 75px;
     background-color: rgb(83, 82, 82);
@@ -69,6 +73,7 @@
 
 }
 
+
 #comics h2 {
     font-weight: bolder;
 }
@@ -80,11 +85,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     box-sizing: border-box;
-}
-
-.add-fav {
-    position: relative;
-    z-index: 2;
+    border-bottom: 2px red solid;
 }
 
 .com-card {
@@ -117,4 +118,42 @@
 
 .com-title {
     width: 50%;
+}
+
+
+#events {
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgb(3, 3, 3);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#event-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: black;
+    border: red solid 2px;
+    padding: 10px;
+}
+
+#event-card {
+    margin-top: 5%;
+    padding: 1em;
+    border: 2px solid red;
+    height: 10px;
+
+}
+
+.event-card img {
+    object-fit: contain;
+    border: 1px red solid;
+    padding: 5%;
+    height: 500px;
 }
