@@ -39,11 +39,14 @@ FontAwesome(for icons)
 ### HomePage
 ![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/b73383c5-7a12-4ef9-b938-a7eebf21e820)
 
-### Character Page
-![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/3f4b89bd-0d9d-4b8a-96ed-63cfcf257bc1)
+### Favorites Page
+![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/abd01be5-8812-4890-8bc0-f1853d2b7479)
 
-Visual representation of the project's UI\
-GIFs or videos showcasing features (optional)
+### Character Page
+![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/b96bd820-5998-422a-97e5-4be984109ba6)
+
+### Comic Page
+![image](https://github.com/varmavemula/SuperHeroHunt/assets/125905044/7401f874-1ae9-4cfa-af50-02311ec2618e)
 
 
 ## Author
