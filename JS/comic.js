@@ -1,11 +1,17 @@
 async function fetchCharacterData(url) {
+    console.log(url);
     return fetch(url)
             .then(res=>res.json())
             .then(res=>res);
 } 
 
+function getLastPart(resourceUrl) {
+    const parts = resourceUrl.split('/');
+    return parts.at(-1);
+  }
 async function loadComicCharacter(characterItem) {
-    const characterData = await fetchCharacterData(`${characterItem.resourceURI}?&ts=${ts}&apikey=${publicKey}&hash=${hash}`)
+
+    const characterData = await fetchCharacterData(`${baseCharactersUrl}/characters/${getLastPart(characterItem.resourceURI)}?&ts=${ts}&apikey=${publicKey}&hash=${hash}`)
     let data = characterData.data.results[0];
     console.log(data);
     const currData = `<div class="com-card">
@@ -26,6 +32,7 @@ function loadComicPage() {
     let wholeComicData = JSON.parse(localStorage.getItem('Comics'));
 
     const Comic = wholeComicData.find(e => e.id == comicId);
+    console.log(Comic);
 
     let dataLoad = '';
     dataLoad += ` <div class="char-cover">
